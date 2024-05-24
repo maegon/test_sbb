@@ -5,6 +5,7 @@ import com.example.blog.domain.post.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -16,10 +17,11 @@ public class PostService {
         return postRepository.findAll();
     }
 
-    public void create(String title, String content) {
+    public void create(LocalDateTime createDate, String title, String content) {
         Post post = Post.builder()
                 .title(title)
                 .content(content)
+                .createDate(createDate)
                 .build();
         postRepository.save(post);
     }
