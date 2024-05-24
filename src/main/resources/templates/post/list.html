@@ -9,10 +9,10 @@
     <tbody>
         <tr th:each="post : ${postList}">
             <td>
-                <a th:text="${post.id}" href="@{|/post/detail/${post.id}|}"></a>
+                <a th:text="${post.id}" th:href="@{|/post/detail/${post.id}|}"></a>
             </td>
             <td>
-                <a th:text="${post.title}" href="@{|/post/detail/${post.id}|}"></a>
+                <a th:text="${post.title}" th:href="@{|/post/detail/${post.id}|}"></a>
             </td>
             <td th:text="${post.createDate}"></td>
         </tr>
