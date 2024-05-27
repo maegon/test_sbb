@@ -35,12 +35,11 @@ dependencies {
 	// 시큐리티
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
-<<<<<<< HEAD
+
 
 	// oauth2
 	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
-=======
->>>>>>> f6c4578245555b95b361d5f23dd046b46f4b47f8
+
 }
 
 tasks.named('test') {
