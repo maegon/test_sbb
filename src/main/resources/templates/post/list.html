@@ -1,0 +1,26 @@
+<h1>목록</h1>
+
+<div>
+    <a th:href="@{/post/create}" th:text="작성"></a>
+</div>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성일</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="post : ${postList}">
+            <td>
+                <a th:text="${post.id}" th:href="@{|/post/detail/${post.id}|}"></a>
+            </td>
+            <td>
+                <a th:text="${post.title}" th:href="@{|/post/detail/${post.id}|}"></a>
+            </td>
+            <td th:text="${post.createDate}"></td>
+        </tr>
+    </tbody>
+</table>
