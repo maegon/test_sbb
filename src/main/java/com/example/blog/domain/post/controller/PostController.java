@@ -40,7 +40,7 @@ public class PostController {
     }
 
     @PostMapping("/create")
-    public String postCreate(@RequestParam(value="title") String title, @RequestParam(value="content")String content) {
+    public String postCreate(@RequestParam(value = "title") String title, @RequestParam(value = "content") String content) {
         postService.create(title, content);
 
         return "redirect:/post/list";
