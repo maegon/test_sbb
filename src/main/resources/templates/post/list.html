@@ -30,6 +30,9 @@
     <ul th:each="post : ${postList}">
         <li th:text="${post.title}"></li>
         <li th:text="${post.content}"></li>
+        <li>
+            <img th:src="@{|/file/${post.thumnailImg}|}" alt="12314">
+        </li>
     </ul>
 </div>
 

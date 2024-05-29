@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -40,9 +41,11 @@ public class PostController {
     }
 
     @PostMapping("/create")
-    public String postCreate(@RequestParam(value = "title") String title, @RequestParam(value = "content") String content) {
-        postService.create(title, content);
+    public String create(@RequestParam("title") String title, @RequestParam("content") String content, @RequestParam("thumbnail") MultipartFile thumbnail) {
+        postService.create(title, content, thumbnail);
 
         return "redirect:/post/list";
     }
+
+
 }

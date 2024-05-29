@@ -20,6 +20,7 @@ public class Post extends BaseEntity {
     private Long id;
     private String title;
     private String content;
+    private String thumbnailImg;
     private LocalDateTime createDate;
     @ManyToOne
     private Member author;
